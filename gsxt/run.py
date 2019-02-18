@@ -1,5 +1,5 @@
 import requests
-from 
+from decrypt521 import get_gt_challenge
 
 def get_data(searchword, challenge, validate):
     data = {
@@ -12,5 +12,4 @@ def get_data(searchword, challenge, validate):
     }
 
 
-if __name__ == '__main__':
-    # get_data("百度")
+

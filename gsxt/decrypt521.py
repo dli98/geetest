@@ -46,6 +46,7 @@ def get_gt_challenge():
     headers['Cookie'] = __jsluid + ';' + __jsl_clearance + ';'
     try:
         r = requests.get(url, headers=headers).json()
+        print(r)
         if 'challenge' in r and 'gt' in r:
             return r['gt'], r['challenge']
         else:
@@ -57,4 +58,3 @@ def get_gt_challenge():
 
 if __name__ == '__main__':
     gt, challenge = get_gt_challenge()
-    print(gt, challenge)
