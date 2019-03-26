@@ -58,3 +58,4 @@ def get_gt_challenge():
 
 if __name__ == '__main__':
     gt, challenge = get_gt_challenge()
+    print(gt, challenge)

@@ -2,6 +2,12 @@ import requests
 import time
 
 
+def get_w():
+    z1q = 'W6XX.k1q.W1q'
+
+    pass
+
+
 # 获得bg和fullbg的地址
 def get_bg_fullbg(gt, challenge):
     url = 'http://api.geetest.com/get.php'
@@ -48,7 +54,8 @@ def get_bg_fullbg(gt, challenge):
 
 
 if __name__ == '__main__':
-    from decrypt521 import get_gt_challenge
-
-    gt, challenge = get_gt_challenge()
-    get_bg_fullbg(gt, challenge)
+    get_w()
+    # from decrypt521 import get_gt_challenge
+    #
+    # gt, challenge = get_gt_challenge()
+    # get_bg_fullbg(gt, challenge)
