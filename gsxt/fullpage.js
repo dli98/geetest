@@ -66,7 +66,7 @@ W6XX.k1q = function() {
             break;
         }
     }
-}();
+}();  // w1q 字体加密
 function W6XX() {}
 W6XX.m0V = function() {
     return typeof W6XX.N0V.W0V === 'function' ? W6XX.N0V.W0V.apply(W6XX.N0V, arguments) : W6XX.N0V.W0V;
@@ -141,7 +141,7 @@ W6XX.N0V = function() {
             break;
         }
     }
-}();
+}();   // witch 循环嵌套加密
 W6XX.V0V = function() {
     return typeof W6XX.N0V.W0V === 'function' ? W6XX.N0V.W0V.apply(W6XX.N0V, arguments) : W6XX.N0V.W0V;
 }
@@ -149,7 +149,7 @@ W6XX.V0V = function() {
 W6XX.G1q = 7;
 W6XX.F1q = function() {
     return typeof W6XX.k1q.W1q === 'function' ? W6XX.k1q.W1q.apply(W6XX.k1q, arguments) : W6XX.k1q.W1q;
-}
+} // 与d1q 一致
 ;
 var P8SSSS = W6XX.V0V()[17][23][23];
 for (; P8SSSS !== W6XX.V0V()[14][11][11]; ) {
@@ -1985,7 +1985,7 @@ for (; P8SSSS !== W6XX.V0V()[14][11][11]; ) {
                     };
                     g6q = M0V.V0V()[3][31][7];
                     break;
-                case M0V.V0V()[22][7][7]:
+                case M0V.V0V()[22][7][7]:   // 加密模块
                     var L4 = function() {
                         function e2(F6X) {
                             return H2[M0V.F1q(528)](F6X);
