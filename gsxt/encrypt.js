@@ -766,6 +766,7 @@ var L4 = function() {    //L4对象 包含各种加密函数的声明
         if (x3q * (x3q + 1) * x3q % 2 == 0 && null == M3X)
             return null;
         var o3X = M3X[M0V.F1q(91)](16);
+        console.log(o3X)
         return e3q * (e3q + 1) * e3q % 2 == 0 && 0 == (1 & o3X[M0V.F1q(1097)]) ? o3X : M0V.F1q(579) + o3X;
     }
     function j2(i5X) {
@@ -864,3 +865,192 @@ var L4 = function() {    //L4对象 包含各种加密函数的声明
     P0[M0V.F1q(276)][M0V.F1q(820)] = G2,
     P0;
 }();
+
+var yfa80 =  function(a8Q) {
+    var w79 = M0V.V0V()[15][35][23];
+    for (; w79 !== M0V.V0V()[7][32][16][32]; ) {
+        switch (w79) {
+        case M0V.m0V()[28][22][22]:
+            var v8Q = this
+              , Y8Q = new L4()[M0V.F1q(820)](v8Q[M0V.d1q(498)](a8Q));
+            w79 = M0V.m0V()[8][11][11];
+            break;
+        case M0V.m0V()[20][23][23]:
+            var f7q = 5;
+            w79 = M0V.m0V()[1][22][22];
+            break;
+        case M0V.V0V()[4][35][11]:
+            w79 = (!Y8Q || 256 !== Y8Q[M0V.d1q(1097)]) && f7q * (f7q + 1) * f7q % 2 == 0 ? M0V.V0V()[2][13][1] : M0V.m0V()[25][26][2];
+            break;
+        case M0V.V0V()[12][25][1]:
+            Y8Q = new L4()[M0V.d1q(820)](v8Q[M0V.F1q(498)](!0));
+            w79 = M0V.V0V()[32][19][7];
+            break;
+        case M0V.m0V()[0][14][2]:
+            return Y8Q;
+            break;
+        case M0V.V0V()[17][19][8][19]:
+            f7q = f7q > 71903 ? f7q / 4 : f7q * 4;
+            w79 = M0V.m0V()[4][35][11];
+            break;
+        }
+    }
+};
+
+
+var encrypt = function(r9X, W9X, N1X) {
+    var z3q = 0;
+    var W9X = B3X[M0V.F1q(1128)](W9X);
+    N1X && N1X[M0V.F1q(574)] || (N1X = N1X || {},
+    N1X[M0V.F1q(574)] = B3X[M0V.d1q(1128)](M0V.F1q(109)));
+    for (var U9X = C3X[M0V.d1q(820)](f1X, r9X, W9X, N1X), e9X = U9X[M0V.F1q(732)][M0V.d1q(518)], H9X = U9X[M0V.d1q(732)][M0V.d1q(1321)], c9X = [], Z1X = 0; z3q * (z3q + 1) % 2 + 2 && Z1X < H9X; Z1X++) {
+        var J9X = e9X[Z1X >>> 2] >>> 24 - Z1X % 4 * 8 & 255;
+        c9X[M0V.F1q(902)](J9X);
+        z3q = z3q > 42696 ? z3q - 6 : z3q + 6;
+    }
+    return c9X;
+};
+
+var p6_be = function(p6, n3, V3) {
+    var u6q = M0V.m0V()[5][23][23];
+    for (; u6q !== M0V.m0V()[9][24][24]; ) {
+        switch (u6q) {
+        case M0V.V0V()[24][12][12]:
+            G3 = (n3[F3] << 16) + (n3[F3 + 1] << 8) + n3[F3 + 2],
+            q3 += i3[M0V.F1q(700)](w3(G3, V3[M0V.F1q(90)])) + i3[M0V.d1q(700)](w3(G3, V3[M0V.d1q(804)])) + i3[M0V.F1q(700)](w3(G3, V3[M0V.d1q(1371)])) + i3[M0V.F1q(700)](w3(G3, V3[M0V.d1q(203)]));
+            u6q = M0V.m0V()[11][30][6];
+            break;
+        case M0V.m0V()[15][31][7]:
+            u6q = g9q * (g9q + 1) % 2 + 10 && F3 < g3 ? M0V.V0V()[17][2][2] : M0V.V0V()[25][25][25];
+            break;
+        case M0V.m0V()[35][22][10]:
+            var C3 = g3 % 3;
+            u6q = M0V.m0V()[17][15][27];
+            break;
+        case M0V.m0V()[11][8][8]:
+            u6q = F3 + 2 < g3 ? M0V.V0V()[30][12][12] : M0V.V0V()[30][34][10];
+            break;
+        case M0V.V0V()[15][25][6][25]:
+            var w3 = function(f3, N3) {
+                var B6q = M0V.V0V()[12][35][23];
+                for (; B6q !== M0V.m0V()[11][2][2]; ) {
+                    switch (B6q) {
+                    case M0V.V0V()[23][11][31][35]:
+                        1 === i3[M0V.F1q(301)](N3, z3) && (P3 = (P3 << 1) + i3[M0V.d1q(301)](f3, z3));
+                        B6q = M0V.m0V()[9][25][23][13];
+                        break;
+                    case M0V.m0V()[26][23][23]:
+                        var P3 = 0
+                          , z3 = V3[M0V.d1q(406)] - 1;
+                        B6q = M0V.V0V()[34][22][22];
+                        break;
+                    case M0V.m0V()[4][1][1]:
+                        z3 -= 1;
+                        B6q = M0V.m0V()[12][10][22];
+                        break;
+                    case M0V.V0V()[0][10]:
+                        B6q = z3 >= 0 ? M0V.V0V()[35][11][11] : M0V.V0V()[35][19][7];
+                        break;
+                    case M0V.m0V()[14][19][7]:
+                        return P3;
+                        break;
+                    }
+                }
+            }
+              , q3 = M0V.F1q(1268)
+              , E3 = M0V.F1q(1268)
+              , g3 = n3[M0V.F1q(1097)]
+              , F3 = 0;
+            u6q = M0V.V0V()[26][19][7];
+            break;
+        case M0V.V0V()[33][13][25]:
+            return {
+                '\x72\x65\x73': q3,
+                '\x65\x6e\x64': E3
+            };
+            break;
+        case M0V.m0V()[19][18][6]:
+            g9q = g9q > 21235 ? g9q - 3 : g9q + 3;
+            u6q = M0V.V0V()[20][27][3];
+            break;
+        case M0V.V0V()[25][15][3]:
+            F3 += 3;
+            u6q = M0V.V0V()[32][19][7];
+            break;
+        case M0V.V0V()[30][14][5][2]:
+            var G3;
+            u6q = M0V.m0V()[14][8][8];
+            break;
+        case M0V.m0V()[0][27][27]:
+            2 === C3 ? (G3 = (n3[F3] << 16) + (n3[F3 + 1] << 8),
+            q3 += i3[M0V.d1q(700)](w3(G3, V3[M0V.F1q(90)])) + i3[M0V.d1q(700)](w3(G3, V3[M0V.d1q(804)])) + i3[M0V.d1q(700)](w3(G3, V3[M0V.d1q(1371)])),
+            E3 = V3[M0V.d1q(325)]) : 1 === C3 && (G3 = n3[F3] << 16,
+            q3 += i3[M0V.F1q(700)](w3(G3, V3[M0V.d1q(90)])) + i3[M0V.d1q(700)](w3(G3, V3[M0V.F1q(804)])),
+            E3 = V3[M0V.F1q(325)] + V3[M0V.F1q(325)]);
+            u6q = M0V.m0V()[6][6][6];
+            break;
+        case M0V.V0V()[31][11][23]:
+            var g9q = 10;
+            var i3 = p6;
+            V3 || (V3 = i3);
+            u6q = M0V.V0V()[18][25][1];
+            break;
+        }
+    }
+};
+
+var p6_ce =  function(p6, H1) {
+    var c1 = p6_be(p6, H1);
+    return c1[M0V.d1q(374)] + c1[M0V.F1q(232)];
+
+};
+//  加密开始
+var y9Q = yfa80();
+D9Q[M0V.d1q(285)] = y9Q,
+    D9Q[M0V.F1q(86)][M0V.d1q(542)] = 4,
+    D9Q[M0V.F1q(86)][M0V.F1q(343)] = true,
+    D9Q[M0V.d1q(86)][M0V.d1q(1173)] = y9Q;
+var M9Q = D9Q[M0V.F1q(1288)]()
+    , I9Q = encrypt(F6[M0V.F1q(569)](D9Q[M0V.d1q(86)]), D9Q[M0V.d1q(498)]())
+    , p6 = {}
+    , p9Q = p6_ce(p6, I9Q)
+    , w = p9Q + M9Q;
+
+
+var decrypt = function() {
+    var b09 = M0V.m0V()[10][11][23];
+    for (; b09 !== M0V.V0V()[12][6][6];) {
+        switch (b09) {
+            case M0V.V0V()[19][11][23]:
+                var H7q = 5;
+                var D9Q = this
+                    , o9Q = D9Q[M0V.d1q(625)];
+                b09 = M0V.V0V()[23][11][11];
+                break;
+            case M0V.m0V()[11][13][1]:
+                return m6(R6(M0V.d1q(1024), D9Q));
+                break;
+            case M0V.V0V()[18][23][11]:
+                b09 = (!o9Q[M0V.F1q(1281)] || !o9Q[M0V.d1q(318)]) && H7q * (H7q + 1) % 2 + 2 ? M0V.V0V()[12][25][1] : M0V.V0V()[14][19][7][7];
+                break;
+            case M0V.m0V()[31][7][7]:
+                var y9Q = D9Q[M0V.F1q(200)][M0V.d1q(306)]();
+                D9Q[M0V.d1q(285)] = y9Q,
+                    D9Q[M0V.F1q(86)][M0V.d1q(542)] = o9Q[M0V.F1q(542)],
+                    D9Q[M0V.F1q(86)][M0V.F1q(343)] = o9Q[M0V.d1q(1124)],
+                    D9Q[M0V.d1q(86)][M0V.d1q(1173)] = y9Q;
+                var M9Q = D9Q[M0V.F1q(1288)]()
+                    , I9Q = W4[M0V.F1q(820)](F6[M0V.F1q(569)](D9Q[M0V.d1q(86)]), D9Q[M0V.d1q(498)]())
+                    , p9Q = p6[M0V.d1q(999)](I9Q)
+                    , d9Q = {
+                    '\x67\x74': D9Q[M0V.F1q(86)][M0V.F1q(1281)],
+                    '\x63\x68\x61\x6c\x6c\x65\x6e\x67\x65': D9Q[M0V.F1q(86)][M0V.F1q(318)],
+                    '\x6c\x61\x6e\x67': o9Q[M0V.d1q(357)],
+                    '\x70\x74': D9Q[M0V.d1q(1417)],
+                    '\x77': p9Q + M9Q
+                };
+                return d9Q;
+                break;
+        }
+    }
+};
