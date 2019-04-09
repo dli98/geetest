@@ -1,11 +1,16 @@
 import requests
 import time
+import execjs
 
 
 def get_w():
-    z1q = 'W6XX.k1q.W1q'
-
-    pass
+    node = execjs.get()
+    with open('demo.js', 'r', encoding='utf-8') as f:
+        decrypt_js = f.read()
+    ctx = execjs.compile(decrypt_js)
+    # print(ctx)
+    data = ctx.call('decrypt')
+    print(data)
 
 
 # 获得bg和fullbg的地址
