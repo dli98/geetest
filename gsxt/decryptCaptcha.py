@@ -8,8 +8,7 @@ def get_w():
     with open('demo.js', 'r', encoding='utf-8') as f:
         decrypt_js = f.read()
     ctx = execjs.compile(decrypt_js)
-    # print(ctx)
-    data = ctx.call('decrypt')
+    data = ctx.call('E2')
     print(data)
 
 

@@ -53,94 +53,12 @@ def E2(l4X, this):
     return s4X if m4X and u9q * (u9q + 1) % 2 + 7 else '0'
 
 
-this = {
-    0: 222967939,
-    1: 118908145,
-    2: 188415329,
-    3: 75069744,
-    4: 264717231,
-    5: 28197152,
-    6: 151234699,
-    7: 123072569,
-    8: 257940046,
-    9: 136149239,
-    10: 69153984,
-    11: 160478855,
-    12: 113700534,
-    13: 197818708,
-    14: 252746462,
-    15: 240101000,
-    16: 131174635,
-    17: 142190454,
-    18: 149892651,
-    19: 45315654,
-    20: 12583352,
-    21: 62228899,
-    22: 239759230,
-    23: 116435782,
-    24: 26517773,
-    25: 106233527,
-    26: 256801748,
-    27: 195663433,
-    28: 28425246,
-    29: 145098894,
-    30: 169407876,
-    31: 232542245,
-    32: 212533116,
-    33: 98495345,
-    34: 243409245,
-    35: 36623821,
-    36: 25860,
-    37: 222967939,
-    38: 118908145,
-    39: 188415329,
-    40: 75069744,
-    41: 264717231,
-    42: 28197152,
-    43: 151234699,
-    44: 123072569,
-    45: 257940046,
-    46: 136149239,
-    47: 69153984,
-    48: 160478855,
-    49: 113700534,
-    50: 197818708,
-    51: 252746462,
-    52: 240101000,
-    53: 131174635,
-    54: 142190454,
-    55: 149892651,
-    56: 45315654,
-    57: 12583352,
-    58: 62228899,
-    59: 239759230,
-    60: 116435782,
-    61: 26517773,
-    62: 106233527,
-    63: 256801748,
-    64: 195663433,
-    65: 28425246,
-    66: 145098894,
-    67: 169407876,
-    68: 232542245,
-    69: 212533116,
-    70: 98495345,
-    71: 243409245,
-    72: 36623821,
-    73: 25860,
-    74: 0,
-    's': 0,
-    't': 37,
-}
-
 this['DB'] = 28
 this['DM'] = 268435455
 this['DV'] = 268435456
 this['F1'] = 24
 this['F2'] = 4
 this['FV'] = 4503599627370496
-
-E2(16, this)
 
 
 # A2 v2 w2
@@ -156,7 +74,7 @@ class V0:
         m3x = {}
         x3x = 15
         r3q = 2
-        while r3q * (r3q + 1) * r3q % 2 == 0 and (x3x >= 0):
+        while (x3x >= 0):
             s3x = ord(I3x[x3x])
             x3x -= 1
             if s3x < 128:
@@ -175,15 +93,13 @@ class V0:
                     m3X[T3X] = s3X >> 6 & 63 | 128
                     T3x -= 1
                     m3X[T3X] = s3X >> 12 | 224
-            r3q = r3q / 6 if r3q > 41510 else r3q * 6
         T3x -= 1
         m3x[T3x] = 0
         x3x = {}
         p3q = 9
-        while p3q * (p3q + 1) * p3q % 2 == 0 and T3x > 2:
+        while T3x > 2:
             T3x -= 1
             m3x[T3x] = P2()
-            p3q = p3q - 2 if p3q > 51568 else p3q + 2
         T3x -= 1
         m3x[T3x] = 2
         T3x -= 1
@@ -221,7 +137,7 @@ class V0:
         num = 0
         self.this['t'] = 0
         self.this['s'] = 0
-        while e4x > 0 and j9q * (j9q + 1) % 2 + 2:
+        while e4x > 0:
             e4x -= 1
             c4x = 255 & U4X[e4x] if 8 == Z6x else g0[ord(U4X[e4x])]
             if c4x < 0:
@@ -243,7 +159,6 @@ class V0:
                 N6x += Z6x
                 if N6x >= 28:
                     N6x -= 28
-            j9q = j9q / 10 if j9q >= 24874 else j9q * 10
 
     def Q2(self, C6X, this):
         w9q = 9
@@ -287,3 +202,237 @@ class V0:
 
     def x2(self, y5x, u5x, H5x):
         pass
+
+
+# 产生两个v0 一个是new L4时产生的原始v0, 一个是根据字符串和位数确定的v0
+
+
+def p2(this, num):
+    """
+    :param this: 调用对象
+    :param num: 0 | 1
+    :return:
+    """
+    this["t"] = 1
+    this["s"] = -1 if num < 0 else 0
+    if num > 0:
+        this[0] = num
+    elif num < -1:
+        this[0] = num + this["DV"]
+    else:
+        this["t"] = 0
+
+
+a = 1
+
+
+def J2(num):
+    '''
+    :param num: 0 或 1
+    :return:
+    '''
+    v0 = dict(v0_object)
+    v0['fromInt'](v0, num)  # p2
+    return v0
+
+
+def r2(object):
+    Q3q = 10;
+    s3q = 4;
+    g3q = 1;
+    if (this["t"] < 1):
+        return 0
+    v5X = this[0];
+    if 0 == (1 & v5X):
+        return 0
+    Y5X = 3 & v5X;
+    Y5X = Y5X * (2 - (15 & v5X) * Y5X) & 15
+    Y5X = Y5X * (2 - (255 & v5X) * Y5X) & 255
+    Y5X = Y5X * (2 - ((65535 & v5X) * Y5X & 65535)) & 65535
+    Y5X = Y5X * (2 - v5X * Y5X % this["DV"]) % this["DV"]
+    return this["DV"] - Y5X if Y5X > 0  else -Y5X;
+
+
+def F0(d5x):
+    """
+    :param d5x:
+    :return:返回一个新的F0对象
+    """
+    object = dict(F0_object)
+    object['m'] = d5x
+    return object
+
+
+def E0(a5x):
+    """
+    :param a5x: L4创建的v0对象
+    :return: object E0
+    """
+    object = dict(E0_object)
+    objec["m"] = a5X,
+    objec["mp"] = a5X["invDigit"](a5x),
+    objec["mpl"] = 32767 & objec["mp"],
+    objec["mph"] = objec["mp"] >> 15,
+    objec["um"] = (1 << a5X["DB"] - 15) - 1,
+    objec["mt2"] = 2 * a5X["t"];
+    return object
+
+
+def B2(object, W3X, U3X):
+    """
+    :param object: E0
+    :param W3X: P0['n']
+    :param U3X: 新建E0对象
+    :return:
+    """
+    D3q = 9;
+    f3q = 4;
+    if (W3X > 4294967295 or W3X < 1):
+        return v0["ONE"];
+    N5X = i0()
+    Z5X = i0()
+    c3X = U3X["convert"](this)
+    e3X = Z0(W3X) - 1
+    c3X["copyTo"](N5X)
+    while --e3X >= 0:
+        U3X["sqrTo"](N5X, Z5X)
+        if (W3X & 1 << e3X) > 0:
+            U3X["mulTo"](Z5X, c3X, N5X)
+        else:
+            H3X = N5X
+            N5X = Z5X
+            Z5X = H3X
+    return U3X["revert"](N5X)
+
+
+def A2(object, r3X, J3X):
+    """
+    :param object: v0
+    :param r3X: e
+    :param J3X: n
+    :return:
+    """
+    n3q = 0
+    L3X = F0(J3X) if (r3X < 256 or J3X["isEven"]()) else E0(J3X)
+    # 调用B2
+    return object["exp"](object, r3X, L3X)
+
+
+def i2(object, D3x):
+    """
+    :param object: P0
+    :param D3x: 随机参数v0
+    :return:
+    """
+    return D3X["modPowInt"](D3x, object["e"], object["n"])
+
+
+def G2(object, I3X):
+    """
+    :param object: 调用这个函数的对象
+    :param I3X: 随机字符串
+    :return:
+    """
+    e3q = 4
+    x3q = 8
+    Y3q = 4
+    #  this P0 ,I3X 16为随机字符串, 128   u2
+    y3X = v2(I3X, object["n"]["bitLength"]() + 7 >> 3)
+    if (None == y3X):
+        return None
+    M3X = object["doPublic"](object, y3X)
+    if None == M3X:
+        return None
+    o3X = M3X["toString"](16)
+    return o3X if 0 == (1 & len(o3X)) else "0" + o3X
+
+
+def new_v0():
+    object = dict(v0_object)
+    return object
+
+def v0(object, modulus, length=None, m6X=None):
+    '''
+    :param object:  v0_object对象
+    :param modulus:
+    :param length:
+    :param m6X:
+    :return:
+    '''
+    # l6X, T6X, m6X
+    if None != modulus :
+        if "int" == type(modulus):
+            object["fromNumber"](modulus, length, m6X)
+        elif None == length and "str" != type(modulus) :
+            object["fromString"](modulus, 256)
+        else:
+            object["fromString"](modulus, length)
+
+
+def Y2(modulus, length=16):
+    new_v = new_v0()
+    new_v['v0'](new_v, modulus, 16)
+
+def V2(modulus, pub_key):
+    i3q = 2;
+    if modulus and pub_key and len(modulus) and len(pub_key):
+        this["n"] = Y2(modulus, 16)
+        this["e"] = int(pub_key, 16)
+    else:
+        print("Invalid RSA public key")
+
+v0_object = {
+    "v0": v0,
+    "DB": "28",
+    "DM": 268435455,
+    "DV": 268435456,
+    "F1": 24,
+    "F2": 4,
+    "FV": 4503599627370496,
+    # "copyTo": Q2,
+    "fromInt": p2,
+    # "fromString": w2,
+    # "clamp": q2,
+    # "dlShiftTo": l2,
+    # "drShiftTo": T2,
+    "modPowInt": A2,
+    # "mod": t2,
+    "invDigit": r2,
+    "exp": B2,
+}
+tmp = {
+    "ZERO": J2(0),
+    "ONE": J2(1),
+}
+P0 = {
+    "doPUblic": i2,
+    "e": 0,
+    "n": 26,
+    "d": None,
+    "p": None,
+    "q" : None,
+    "dmp1":None,
+    "dmq1":None,
+    "coeff": None,
+    "setPublic": V2(
+    "00C1E3934D1614465B33053E7F48EE4EC87B14B95EF88947713D25EECBFF7E74C7977D02DC1D9451F79DD5D1C10C29ACB6A9B4D6FB7D0A0279B6719E1772565F09AF627715919221AEF91899CAE08C0D686D748B20A3603BE2318CA6BC2B59706592A9219D0BF05C9F65023A21D2330807252AE0066D59CEEFA5F2748EA80BAB81",
+    "10001")
+}
+F0_object = {
+    # "convert": D2,
+    # "revert": o2,
+    # "reduce": y2,
+    # "sqrTo": M2,
+}
+E0_object = {
+    # "convert": j2,
+    # "revert": h2,
+    # "reduce": k2,
+    # "mulTo": S2,
+    # "sqrTO": O2
+}
+
+if __name__ == '__main__':
+    J2(1)
+    p0 = dict(P0)
+
