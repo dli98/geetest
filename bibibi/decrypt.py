@@ -24,7 +24,7 @@ class Encrypyed():
         text = {
             "userresponse":userresponse,
             "passtime":passtime,
-            "imgload":300, #str(random.randint(100, 200)),
+            "imgload": random.randint(100, 800),
             "aa":aa,
             "ep":{"v": "6.0.9"},
             'rp':hash.hexdigest()
@@ -42,12 +42,12 @@ class Encrypyed():
             array.append(byte)
 
         enc_text = self.bytes_to_string(array)
-
+        # print(enc_text)
         data =  {
             'gt': initData['gt'],
             'challenge':initData['challenge'],
             'w': enc_text + enc_sec_key,
-            'callback': 'geetest_' + str(int(time.time() * 1000)),
+            # 'callback': 'geetest_' + str(int(time.time() * 1000)),
                  }
         return data
 
@@ -166,17 +166,10 @@ if __name__ == '__main__':
     ep = Encrypyed()
     initData = {
         'gt':"1aa3ab3b7f07681cb310696cd27932d1",
-        'challenge': "2e3ba445d2493c8b05e536bfec11468669"
+        'challenge': "fa4bd1c8f63ebf6e800b2be5e650e606ds"
     }
-    aa = "@.----,-.-!)!)!*)!)!*!O)(!!x9ws((ystt(s!*stuy(!)!*(t(yxs_tt(((((((!!($*0$)N:9?9:9::9::99:::8:::D2:N$0Kb$/C:$*N$*S$4/"
-    userresponse =  "acaaab998"
-    params = ep.encrypted_request(initData, userresponse, 2664, aa)
+    aa = "D.2.---c(!!C)(o((ystsysttstsssssy(s(tsssvstttts(!!($*Aa8?9:9O::9::8N?8:::999:OzY18:9d_jE$,.$An"
+    userresponse =  "d33d3dd3d33b5"
+    params = ep.encrypted_request(initData, userresponse, 2444, aa)
     print(params)
-    # response = requests.get(
-    #     "https://api.geetest.com/ajax.php",
-    #     headers=headers,
-    #     params=params
-    # )
-    # text = re.sub("geetest_\d*\(", "", response.text)
-    # print(json.loads(text[:-1]))
 

@@ -15,4 +15,3 @@ while True:
     if "success" in ans.keys() and ans["success"] == 1:
         suc += 1
     print("Acc", "%.2f" % (suc * 1.00 / total), suc, total, ans)
-    break
