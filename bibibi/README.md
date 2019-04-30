@@ -1,5 +1,5 @@
 # geetest-v2
-滑动验证码 纯python实现
+滑动验证码 纯python实现 如果对你有用给个star哦🌟
 
 
 w参数破解：💗AES(JSON.stringify(Z9S)) + RSA()💗
