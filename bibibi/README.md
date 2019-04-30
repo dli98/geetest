@@ -47,7 +47,7 @@ decrypt.py 解密模块
 
 ## 联系我
 - 欢迎反馈！
-- My Email : 942203701@qq.com
+- My Email : cherish_kevin@163.com  
 
 ## 注意：
 - 本项目仅用于学习和交流
