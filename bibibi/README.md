@@ -1,6 +1,9 @@
-# geetest
+# geetest-v2
 滑动验证码
-
+## 文件说明
+trace.py 轨迹  
+run.py 主程序  
+decrypt.py 解密模块
 
 w参数破解：AES(JSON.stringify(Z9S)) + RSA()
     
