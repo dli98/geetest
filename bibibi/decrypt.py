@@ -156,20 +156,3 @@ class Encrypyed():
 
 
 
-if __name__ == '__main__':
-    referer = "https://passport.bilibili.com/login"
-    headers = {
-        "Referer": referer,
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53"
-                      "7.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36"
-    }
-    ep = Encrypyed()
-    initData = {
-        'gt':"1aa3ab3b7f07681cb310696cd27932d1",
-        'challenge': "fa4bd1c8f63ebf6e800b2be5e650e606ds"
-    }
-    aa = "D.2.---c(!!C)(o((ystsysttstsssssy(s(tsssvstttts(!!($*Aa8?9:9O::9::8N?8:::999:OzY18:9d_jE$,.$An"
-    userresponse =  "d33d3dd3d33b5"
-    params = ep.encrypted_request(initData, userresponse, 2444, aa)
-    print(params)
-
