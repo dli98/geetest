@@ -41,5 +41,5 @@ decrypt.py 解密模块
 
 
 ## 运行结果
-![运行结果](/result.png)  
+![运行结果](bibibi/result.png)  
 轨迹forbidden，可自行修改trace.py文件。
