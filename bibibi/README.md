@@ -2,7 +2,8 @@
 滑动验证码 纯python实现
 
 
-w参数破解：<font color=red>AES(JSON.stringify(Z9S)) + RSA()</font>
+w参数破解：💗AES(JSON.stringify(Z9S)) + RSA()💗
+
     
 
 发送方创建一个AES私钥，并对这个私钥通过RSA进行加密。  
@@ -43,3 +44,11 @@ decrypt.py 解密模块
 ## 运行结果
 ![运行结果](bibibi/result.png)  
 轨迹forbidden，可自行修改trace.py文件。
+
+## 联系我
+- 欢迎反馈！
+- My Email : 942203701@qq.com
+
+## 注意：
+- 本项目仅用于学习和交流
+> 欢迎任何人参与和完善：一个人可以走的很快，但是一群人却可以走的更远
