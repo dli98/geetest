@@ -1,12 +1,8 @@
-from Crypto.Signature import PKCS1_v1_5
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
-import requests, base64, binascii, json, os
-import _md5
+import binascii, json, os
 import random
 import hashlib
-import time
-import re
 import rsa
 
 
@@ -22,12 +18,12 @@ class Encrypyed():
         hash.update(bytes(initData['challenge'][0:32], encoding='utf-8'))
         hash.update(bytes(str(passtime), encoding='utf-8'))
         text = {
-            "userresponse":userresponse,
-            "passtime":passtime,
+            "userresponse": userresponse,
+            "passtime": passtime,
             "imgload": random.randint(100, 800),
-            "aa":aa,
-            "ep":{"v": "6.0.9"},
-            'rp':hash.hexdigest()
+            "aa": aa,
+            "ep": {"v": "6.0.9"},
+            'rp': hash.hexdigest()
         }
         text = json.dumps(text, separators=(',', ':'))
         sec_key = self.create_secret_key(8)
@@ -43,15 +39,15 @@ class Encrypyed():
 
         enc_text = self.bytes_to_string(array)
         # print(enc_text)
-        data =  {
+        data = {
             'gt': initData['gt'],
-            'challenge':initData['challenge'],
+            'challenge': initData['challenge'],
             'w': enc_text + enc_sec_key,
             # 'callback': 'geetest_' + str(int(time.time() * 1000)),
-                 }
+        }
         return data
 
-    def aes_encrypt(self, text, secKey, iv, style = 'pkcs7'):
+    def aes_encrypt(self, text, secKey, iv, style='pkcs7'):
         """
         :param text: 文本
         :param secKey: 密钥
@@ -76,7 +72,7 @@ class Encrypyed():
         # 作用是返回的二进制数据的十六进制表示。每一个字节的数据转换成相应的2位十六进制表示
         return binascii.hexlify(os.urandom(size))
 
-    def bytes_to_string(slef,enc_byte):
+    def bytes_to_string(slef, enc_byte):
         flag = 3
         I9z = 3
         t6B = {
@@ -153,6 +149,3 @@ class Encrypyed():
                     '\x65\x6e\x64': K6B
                 }
                 return j6B + K6B
-
-
-
