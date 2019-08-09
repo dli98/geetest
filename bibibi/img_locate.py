@@ -104,7 +104,8 @@ class ImgProcess:
         pix2 = img2.load()[x, y]
         threshold = 60
 
-        if abs(pix1[0] - pix2[0]) < threshold and abs(pix1[1] - pix2[1]) < threshold and abs(pix1[2] - pix2[2]) < threshold:
+        if abs(pix1[0] - pix2[0]) < threshold and abs(pix1[1] - pix2[1]) < threshold and abs(
+                        pix1[2] - pix2[2]) < threshold:
             return True
         else:
             return False
@@ -123,3 +124,16 @@ class ImgProcess:
                     left = i
                     return left
         return left
+
+
+if __name__ == '__main__':
+    """
+    test 图像还原
+    """
+    img_process = ImgProcess()
+    img1 = img_process.get_merge_image('Image/' + "fullbg" + '.jpg')
+    img2 = img_process.get_merge_image('Image/' + "bg" + '.jpg')
+    img1.show()
+    img2.show()
+    distance = int(img_process.get_gap(img1, img2) - 7)
+    print(distance)
