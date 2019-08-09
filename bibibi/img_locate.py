@@ -69,16 +69,17 @@ class ImgProcess:
         :return:合并后的图片对象
         """
         im = Image.open(filename)
+        width, height = im.size
 
-        new_im = Image.new('RGB', (260, 116))
+        new_im = Image.new('RGB', (260, height))
         im_list_upper = []
         im_list_lower = []
 
         for location in self.location_list:
             if location['y'] == -58:
-                im_list_upper.append(im.crop((abs(location['x']), 58, abs(location['x']) + 10, 116)))
+                im_list_upper.append(im.crop((abs(location['x']), height//2, abs(location['x']) + 10, height)))
             if location['y'] == 0:
-                im_list_lower.append(im.crop((abs(location['x']), 0, abs(location['x']) + 10, 58)))
+                im_list_lower.append(im.crop((abs(location['x']), 0, abs(location['x']) + 10, height//2)))
 
         x_offset = 0
         for img in im_list_upper:
@@ -87,7 +88,7 @@ class ImgProcess:
 
         x_offset = 0
         for img in im_list_lower:
-            new_im.paste(img, (x_offset, 58))
+            new_im.paste(img, (x_offset, height//2))
             x_offset += img.size[0]
         return new_im
 
@@ -131,8 +132,8 @@ if __name__ == '__main__':
     test 图像还原
     """
     img_process = ImgProcess()
-    img1 = img_process.get_merge_image('Image/' + "fullbg" + '.jpg')
-    img2 = img_process.get_merge_image('Image/' + "bg" + '.jpg')
+    img1 = img_process.get_merge_image('Image/' + "demo_fullbg" + '.jpg')
+    img2 = img_process.get_merge_image('Image/' + "demo_bg" + '.jpg')
     img1.show()
     img2.show()
     distance = int(img_process.get_gap(img1, img2) - 7)
