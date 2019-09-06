@@ -1,8 +1,8 @@
-# geetest-v2
+# geetest
 滑动验证码 纯python实现 如果对你有用给个star哦🌟
 
 
-w参数破解：💗AES(JSON.stringify(Z9S)) + RSA()💗
+w参数破解：💗Base64(AES(JSON.stringify(Z9S))) + RSA()💗
 
     
 
@@ -39,6 +39,30 @@ decrypt.py 解密模块
 - JSon字符串
 - 初始iv 0000000000000000
 - pkcs7 pad
+
+
+## Base64编码
+
+对AES的结果进行Base64编码
+
+
+**Base64分为四步**
+
+- 第一步，将每三个字节作为一组，一共是24个二进制位。
+
+- 第二步，将这24个二进制位分为四组，每个组有6个二进制位。
+
+- 第三步，在每组前面加两个00，扩展成32个二进制位，即四个字节。
+
+- 第四步，根据编码字符串，得到扩展后的每个字节的对应符号，这就是Base64的编码值。
+
+所谓Base64，就是说选出64个字符----小写字母a-z、大写字母A-Z、数字0-9、符号"+"、"/"（再加上作为垫字的"="，实际上是65个字符）----作为一个基本字符集。然后，其他所有符号都转换成这个字符集中的字符。
+
+本文`base64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789()"`
+
+垫字为`.`
+
+参考资料http://www.ruanyifeng.com/blog/2008/06/base64.html
 
 
 ## 运行结果
