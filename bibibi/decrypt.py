@@ -8,8 +8,10 @@ import rsa
 
 class Encrypyed():
     def __init__(self):
-        self.modulus = "00C1E3934D1614465B33053E7F48EE4EC87B14B95EF88947713D25EECBFF7E74C7977D02DC1D9451F79DD5D1C10C29ACB6A9B4D6FB7D0A0279B6719E1772565F09AF627715919221AEF91899CAE08C0D686D748B20A3603BE2318CA6BC2B59706592A9219D0BF05C9F65023A21D2330807252AE0066D59CEEFA5F2748EA80BAB81"
-        self.pub_key = '10001'
+        self.n = "00C1E3934D1614465B33053E7F48EE4EC87B14B95EF88947713D25EECBFF7E74C7977D02DC1D9451F79DD5D1C10C2" \
+                       "9ACB6A9B4D6FB7D0A0279B6719E1772565F09AF627715919221AEF91899CAE08C0D686D748B20A3603BE2318CA6BC" \
+                       "2B59706592A9219D0BF05C9F65023A21D2330807252AE0066D59CEEFA5F2748EA80BAB81"
+        self.e = '10001'
 
     def encrypted_request(self, initData, userresponse, passtime, aa):
         # md5 加密
@@ -28,7 +30,7 @@ class Encrypyed():
         text = json.dumps(text, separators=(',', ':'))
         sec_key = self.create_secret_key(8)
         # rsa 不对称性对 aes的密钥进行加密
-        enc_sec_key = self.rsa_encrpt(sec_key, self.pub_key, self.modulus)
+        enc_sec_key = self.rsa_encrpt(sec_key, self.n, self.e)
 
         # aes 对称加密  进行轨迹加密
         iv = b"0000000000000000"
@@ -58,11 +60,11 @@ class Encrypyed():
         ciphertext = encryptor.encrypt(pad_pkcs7)
         return ciphertext
 
-    def rsa_encrpt(self, text, pubKey, modulus):
-        '''
+    def rsa_encrpt(self, text, n, e):
+        """
         对text 进行rsa加密   # reverseText^pubKey%modulus
-        '''
-        PublicKey = rsa.PublicKey(int(modulus, 16), int(pubKey, 16))  # rsa库公钥形式
+        """
+        PublicKey = rsa.PublicKey(int(n, 16), int(e, 16))  # rsa库公钥形式
         rs = rsa.encrypt(text, PublicKey)
         return rs.hex()
 
@@ -89,7 +91,6 @@ class Encrypyed():
                 s += b'\0'
 
         for c in range(0, len(s), 3):
-
             # we add newlines after every 76 output characters, according to the MIME specs
             # if c > 0 and (c / 3 * 4) % 76 == 0:
             #     r += "\r\n"

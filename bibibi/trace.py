@@ -2,6 +2,7 @@ import random
 import pickle
 import re
 
+
 def get_trace_fast(distance):
     track = [[-random.randint(15, 22), -random.randint(22, 25), 0]]
     track.append([0, 0, 0])
@@ -13,7 +14,7 @@ def get_trace_fast(distance):
         if rand_x < distance:
             track.append([rand_x, random.randint(-2, 2), passtime])
     passtime += random.randint(100, 150)
-    track.append([distance,  random.randint(-2, 2), passtime])
+    track.append([distance, random.randint(-2, 2), passtime])
     return track
 
 
@@ -48,8 +49,9 @@ def format_track(track):
     track = re.findall('{(.*?)}', track)
     track_list = []
     for x in track:
-        track_list.append([int(_) for _ in  x.split(',')])
+        track_list.append([int(_) for _ in x.split(',')])
     return track_list
+
 
 def choice_track_list(dist):
     source_track = [
@@ -109,6 +111,7 @@ def choice_track_list(dist):
     else:
         return source_track[0], 0
 
+
 def choice_track(dist):
     track, tag = choice_track_list(dist)  # 来自训练路径 tag=1
     # 规范化轨迹数据  [[x,y,t],...]
@@ -122,6 +125,7 @@ def choice_track(dist):
         # tag==1 轨迹数据来自文件 直接赋值
         new_track_list = track_list
     return new_track_list
+
 
 if __name__ == '__main__':
     print(choice_track(76))
