@@ -66,19 +66,6 @@ def choice_track_list(dist):
     ]
     # return source_track
 
-    # linux 和widow不同 # 从dos转为Unix
-    # original = "t_dict_unix.pkl"
-    # destination = "t_dict.pkl"
-    #
-    # content = ''
-    # outsize = 0
-    # with open(original, 'rb') as infile:
-    #     content = infile.read()
-    # with open(destination, 'wb') as output:
-    #     for line in content.splitlines():
-    #         outsize += len(line) + 1
-    #         output.write(line + str.encode('\n'))
-
     t_dict = pickle.load(open('t_dict.pkl', 'rb'))
 
     if str(dist) in t_dict:

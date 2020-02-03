@@ -1,12 +1,14 @@
-import requests
 import json
 import time
 import random
 import os
 import re
+
+import requests
+
 from bibibi import trace
 from bibibi.img_locate import ImgProcess
-from bibibi.decrypt import Encrypyed
+from bibibi.encrypt import Encrypyed
 
 
 # 轨迹处理来自FanhuaandLuomu/geetest_break
