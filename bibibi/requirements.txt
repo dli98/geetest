@@ -7,6 +7,6 @@ pyasn1==0.4.5
 pycryptodome==3.8.1
 PyYAML==5.1
 requests==2.21.0
-rsa==4.0
+rsa==4.1
 shellescape==3.4.1
 urllib3==1.24.3
